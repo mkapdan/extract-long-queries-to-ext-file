@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true" scan="true">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <springProfile name="local">
+        <logger name="org.springframework.web" level="DEBUG"/>
+        <logger name="org.hibernate.type" level="ALL"/>
+        <logger name="org.hibernate" level="ALL"/>
+    </springProfile>
+    <springProfile name="test">
+        <logger name="org.springframework.web" level="INFO"/>
+    </springProfile>
+    <springProfile name="prod">
+        <logger name="org.springframework.web" level="INFO"/>
+    </springProfile>
+</configuration>

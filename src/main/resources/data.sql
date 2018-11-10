@@ -1,0 +1,26 @@
+--admin
+INSERT INTO T_USER (id, C_USERNAME, C_PASSWORD, C_EMAIL, C_STATE, C_EMPLOYEE_NUMBER)
+VALUES (t_user_seq.nextval, 'admin', '$2a$12$.Jk/4WnO9826qT5YvsluCOYjtDdL88XoGOHjufetir4kZUqor.87W', 'admin@admin.mail', 'ACTIVE', '1000');
+
+--teacher
+INSERT INTO T_USER (id, C_USERNAME, C_PASSWORD, C_EMAIL, C_STATE, C_EMPLOYEE_NUMBER)
+VALUES (t_user_seq.nextval, 'teacher', '$2a$12$qwpwGpSy/e0swxyeokZeG.KX50UG31F753R/AhY4iqmo5XPfG/Zc.', 'teacher@teacher@mail', 'ACTIVE', '1001');
+
+--user
+INSERT INTO T_USER (id, C_USERNAME, C_PASSWORD, C_EMAIL, C_STATE, C_EMPLOYEE_NUMBER)
+VALUES (t_user_seq.nextval, 'trainee', '$2a$12$6V5yB1ZU8VUpiOOELgvxDOsopsKreNnBtfPaEIN9A6bV74fg7xT3m', 'trainee@user.mail', 'ACTIVE', '1002');
+
+-- pure login
+INSERT INTO T_USER (id, C_USERNAME, C_PASSWORD, C_EMAIL, C_STATE, C_EMPLOYEE_NUMBER)
+VALUES (t_user_seq.nextval, 'user', '$2a$12$6V5yB1ZU8VUpiOOELgvxDOsopsKreNnBtfPaEIN9A6bV74fg7xT3m', 'user@user.mail', 'ACTIVE', '1003');
+
+
+CREATE TABLE IF NOT EXISTS PERSON_NATIVE (
+  ID         INTEGER PRIMARY KEY AUTO_INCREMENT,
+  FIRST_NAME VARCHAR(50) NOT NULL,
+  AGE        INTEGER
+);
+
+INSERT INTO PERSON_NATIVE (FIRST_NAME, AGE) VALUES ('John', 20);
+INSERT INTO PERSON_NATIVE (FIRST_NAME) VALUES ('John');
+

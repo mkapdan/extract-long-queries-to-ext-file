@@ -1,0 +1,14 @@
+<entity-mappings>
+    <entity class="com.kaptan.data.factorydata.entity.User" name="User">
+        <named-query name="User.selectByName">
+            <query><![CDATA[
+        SELECT a FROM User a WHERE a.username = :username
+        ]]></query>
+        </named-query>
+        <named-query name="User.userCount">
+            <query><![CDATA[
+        SELECT count(*) FROM User ]]></query>
+        </named-query>
+    </entity>
+</entity-mappings>
+
